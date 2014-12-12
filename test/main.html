@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="author" content="fcfe" />
+    <title>component 测试</title>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-8/esl.source.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    require.config({
+        'baseUrl': './src',
+        'paths': {},
+        'packages': [
+            {
+                'name': 'etpl',
+                'location': '../dep/etpl',
+                'main': 'main'
+            },
+            {
+                'name': 'x-tag',
+                'location': '../dep/x-tag',
+                'main': 'main'
+            },
+            {
+                'name': 'phc',
+                'location': '../../src',
+                'main': 'main'
+            }
+        ]
+    });
+    </script>
+</head>
+
+<div id="main"></div>
+<script>
+require(['main']);
+</script>
+</body>
+</html>

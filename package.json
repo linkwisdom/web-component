@@ -1,0 +1,29 @@
+{
+    "name": "fc-component",
+    "version": "0.0.1",
+    "maintainers": [
+        {
+            "name": "liandongliu",
+            "email": "liu@liandong.org",
+            "email2": "liuliandong01@baidu.com"
+        }
+    ],
+    "contributors": [],
+    "dependencies": {},
+    "main": "main",
+    "description": "提供web-component封装",
+    "homepage": "https://github.com/fcfe/fc-component",
+    "repository": "git://github.com/fcfe/fc-component",
+    "edp": {
+        "wwwroot": "/",
+        "depDir": "dep",
+        "srcDir": "src",
+        "loaderAutoConfig": "js,htm,html,tpl,vm,phtml",
+        "loaderUrl": "http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-6/esl.js",
+        "dependencies": {
+            "er": "~0.1.1",
+            "etpl": "~3.0.0",
+            "x-tag": "~0.0.1"
+        }
+    }
+}

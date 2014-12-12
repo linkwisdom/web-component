@@ -1,0 +1,51 @@
+<!-- target:main-content -->
+<div id="module-components-superEditor">
+    <h>web Component</h>
+    <phc-context class="content-wrapper" data-name="linkwisdom">
+        <phc-context>
+            <phc-context data-age="18">
+                <div>
+                    <phc-template-tag changeType="render">
+                       my name is {{name}}, age = {{age}} {{time}}
+                    </phc-template-tag>
+                </div>
+            </phc-context>
+        </phc-context>
+
+        <hr/>
+
+        <phc-template-tag changeType="render">
+            hello word <phc-data-bind data-field="name"></phc-data-bind>
+            this is <phc-data-bind data-field="name"></phc-data-bind>
+            <phc-data-bind data-field="age"></phc-data-bind>
+        </phc-template-tag>
+
+        <hr/>
+
+        name = <phc-text-editor></phc-text-editor>
+
+        <hr/>
+
+        <phc-container>
+            {{content}}
+        </phc-container>
+
+        <hr/>
+        
+        <phc-sub-module data-module-path="module/components/search/Action">
+            [MVC模块]
+        </phc-sub-module>
+        <phc-sub-module data-module-path="module/components/dataTable/Action">
+            [MVC模块]
+        </phc-sub-module>
+    </phc-context>
+</div>
+<style>
+
+[phc-type] {
+    padding: 5px;
+    display: inline-block;
+    line-height: 28px;
+}
+
+</style>
