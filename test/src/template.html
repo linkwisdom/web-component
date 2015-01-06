@@ -1,42 +1,37 @@
 <!-- target:main-content -->
 <div id="module-components-superEditor">
-    <h>web Component</h>
-    <phc-context class="content-wrapper" data-name="linkwisdom">
+    <div>web Component</div>
+    <phc-context class="content-wrapper" data-name="phoenix-component">
         <phc-context>
-            <phc-context data-age="18">
+            <phc-context data-age="18" >
                 <div>
-                    <phc-template-tag changeType="render">
-                       my name is {{name}}, age = {{age}} {{time}}
-                    </phc-template-tag>
+                    <phc-template data-refresh-on-change="true">
+                       这个 {{name}} 模板会刷新, age = {{age}} {{time}}
+                    </phc-template>
                 </div>
             </phc-context>
         </phc-context>
 
         <hr/>
 
-        <phc-template-tag changeType="render">
-            hello word <phc-data-bind data-field="name"></phc-data-bind>
-            this is <phc-data-bind data-field="name"></phc-data-bind>
-            <phc-data-bind data-field="age"></phc-data-bind>
-        </phc-template-tag>
+        <phc-template changeType="render">
+            你好， <phc-data-bind data-field="name"></phc-data-bind>；我会绑定context字段；
+        </phc-template>
 
         <hr/>
 
-        name = <phc-text-editor></phc-text-editor>
+        我是  <input is="phc-text-editor"/>
 
         <hr/>
 
         <phc-container>
-            {{content}}
+            {{name}} 模板
         </phc-container>
 
         <hr/>
         
         <phc-sub-module data-module-path="module/components/search/Action">
-            [MVC模块]
-        </phc-sub-module>
-        <phc-sub-module data-module-path="module/components/dataTable/Action">
-            [MVC模块]
+            你看到我，是因为你还没找到我的控制器
         </phc-sub-module>
     </phc-context>
 </div>

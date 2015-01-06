@@ -23,11 +23,8 @@ define(function (require, exports) {
     );
 
     var container = widget.mix(
-        {
-            template: '<div>container</div>'
-        },
         'container',
-        'template'
+        'context'
     );
 
     exports.phcContainer = phc.register(

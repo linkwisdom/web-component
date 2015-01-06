@@ -5,6 +5,7 @@
 
 define(function (require, exports) {
     var util = require('../core/util');
+    var template = require('./template');
 
     function bindEvents(tag, eventMap) {
         var events = Object.keys(eventMap).map(function (type) {
@@ -18,8 +19,16 @@ define(function (require, exports) {
             tag.addEventListener(evt.type, evt.handler);
         });
     }
+    
+    exports.initTemplate = function () {
+        // 原始的内容作为模板
+        this.template = this.innerHTML;
 
-    exports.tagName = 'phc-container-tag';
+        this.innerHTML =
+            '<phc-template>'
+            + this.innerHTML
+            + '</phc-template>';
+    };
 
     /**
      * 选择容器内的语义标签元素

@@ -5,5 +5,5 @@
 
 define(function (require, exports) {
     exports = require('./baseTags');
-    exports.textEditor = require('./text-editor');
+    exports.textInput = require('./phc-text-input');
 });

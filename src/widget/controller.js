@@ -17,9 +17,6 @@ define(function (require, exports) {
             return;
         }
 
-//         container.id = container.id
-//             || 'phc-' + Math.floor(Math.random() * 0XFFFFFF).toString(36);
-
         this.context.container = container.id;
 
         // 通过命名注册获取控制器

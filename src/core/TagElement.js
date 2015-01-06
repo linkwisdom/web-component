@@ -95,7 +95,10 @@ define(function (require, exports, module) {
                 function (controller) {
                     this.controller = controller;
                     this.context.container = this;
-                    this.controller.enter(this.context);
+                    if (controller.enter) {
+                        controller.enter(this.context);
+                    }
+                    controller.container = this;
                     this.fire('entered');
                 }.bind(this)
             );

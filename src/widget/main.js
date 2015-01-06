@@ -12,6 +12,7 @@ define(function (require, exports) {
     exports.template = require('./template');
     exports.container = require('./container');
     exports.module = require('./module');
+    exports.controller = require('./controller');
 
     exports.mix = function () {
         var widgets = [].map.call(arguments, function (widgetName) {

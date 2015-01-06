@@ -23,7 +23,11 @@ define(function (require) {
             // 异步模块
             require([container.context.modulePath], function (Action) {
                 // 直接是一个拷贝
-                container.context.args = util.extends({args: null}, container.context, {addOnly: true});
+                container.context.args = util.extends(
+                    {args: null},
+                    container.context,
+                    {addOnly: true}
+                );
                 container.controller = new Action();
                 callback(container.controller);
             });

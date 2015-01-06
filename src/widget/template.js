@@ -27,15 +27,15 @@ define(function (require, exports, module) {
                 this.template = this.innerHTML;
             }
             this.render();
+        },
+        onContextChange: function (changes) {
+            var tag = this;
+            
+            // 如果定义changeType未render
+            if (this.dataset.refreshOnChange === 'true') {
+                return this.render();
+            }
         }
-//         onContextChange: function (changes) {
-//             var tag = this;
-
-//             // 如果定义changeType未render
-//             if (this.getAttribute('changeType') == 'render') {
-//                 return this.render();
-//             }
-//         }
     };
     
     module.exports = util.mix(proto, context);
